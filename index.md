@@ -193,10 +193,10 @@ $ git show 7d7d553:main.c
 [GitHub Desktop](https://desktop.github.com/) , [GitKraken](https://www.gitkraken.com/), [SourceTree](https://www.sourcetreeapp.com/), [Fork](https://git-fork.com/) 等のGUIを使うと良い。
 
 それぞれの比較 （**2020年らへんに調べた情報のため今は違うかも**）:
-- [GitHub Desktop](https://desktop.github.com/): 使うのが **一番簡単** だが機能が少ない。</li>
-- [GitKraken](https://www.gitkraken.com/): 機能が多いが、初心者には少し難しいかもしれない。有料。</li>
-- [SourceTree](https://www.sourcetreeapp.com/): GitKrakenと比べると操作が直感的ではない。</li>
-- [Fork](https://git-fork.com/): 使ったことがないが、良いと聞く。</li>
+- [GitHub Desktop](https://desktop.github.com/): 使うのが **一番簡単** だが機能が少ない。
+- [GitKraken](https://www.gitkraken.com/): 機能が多いが、初心者には少し難しいかもしれない。有料。
+- [SourceTree](https://www.sourcetreeapp.com/): GitKrakenと比べると操作が直感的ではない。
+- [Fork](https://git-fork.com/): 使ったことがないが、良いと聞く。
 
 ## 他のVCSは？
 Gitは **2005年** に登場した比較的新しいVCS。以前は主に **subversion** が使われていた。
