@@ -221,8 +221,11 @@ gitはバージョン管理システム。GitHubはgitの履歴を複数人で�
 競合としてGitLabやGitBucketなどがある他、自分でサーバーを用意することもできる。
 
 # Gitを使った共同編集
+- GitHub の理解のために、gitをいますぐには共同作業に使う予定が無い人も読むことを勧めます。
+
 ## bare git repository
-複数のgitレポジトリ（ `git init` を実行したディレクトリ）を同期するには、 **bare git repository** が必要。bare git repositoryは `git init --bare` で作成できる。
+複数のgitレポジトリ（ `git init` を実行したディレクトリ）を同期するには、 **bare git repository** が必要。bare git repositoryは `git init --bare` で作成できる。\
+> 注意: `--bare` が無い場合の `git init` と異なり、`git init --bare` はカレントディレクトリに直接複数のファイルを生成するため、新しく空のディレクトリを作り、そこへ `cd` してから実行すると良い。
 
 `git remote add <任意の名前> <urlやファイルパスなど>` で同期に使うbare git repositoryを追加できる。ここで追加したレポジトリを **リモートレポジトリ** という。 `git remote -v` で今までに追加したリモートレポジトリのリストを表示できる。なお、リモートではない（ `--bare` をつけずに初期化した）レポジトリは **ローカルレポジトリ** という。
 
