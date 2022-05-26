@@ -77,6 +77,7 @@ Initialized empty Git repository in /home/foo/bar/.git/
 ### 2.
 main.cを作って **git add** → **git commit**\
 `-m "コミットメッセージ"` はコミットにつけるメッセージの指定で、あとで見返した時に何の変更をしたのかがすぐに分かるようにするためのもの。（必須）
+
 ```cpp
 #include <stdio.h>
 #include <stdlib.h>
@@ -103,6 +104,18 @@ $ git commit -m "initial commit"
 [master (root-commit) 7d7d553] initial commit
  1 files changed, 18 insertions(+)
  create mode 100644 main.c
+```
+
+ターミナル（or コマンドプロンプト）のカレントディレクトリ下に複数のファイルがある場合は、それらすべてが保存される。
+1つのファイルだけを保存したい場合は、`git add .` を `git add <ファイル名>` に変更するか、`.gitignore` または `.git/info/exclude` ファイルで保存対象にするファイルを指定する。（後述）
+
+初回に限り、次のメッセージが表示される。`git config user.name <名前>` と `git config user.email <メールアドレス>` を実行してコミットに紐付けるユーザー名を指定する必要がある。
+名前とメールアドレスの部分は何でもよく、`git config user.name a` `git config user.email a` でも良い。ただ、共同作業するときに誰が作業したのかがわかるように、名前にはグループ内で個人を特定できる名前を使うと良い。メールアドレスに本当のアドレスを設定するのは、コミットをインターネット上に公開したときにスパムが飛んでくる可能性があり、メリットが無いため推奨しない。
+
+```
+Author identity unknown
+
+***Please tell me who you are.
 ```
 
 ### 3.
