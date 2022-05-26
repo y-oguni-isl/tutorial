@@ -112,8 +112,9 @@ $ git commit -m "initial commit"
 1つのファイルだけを保存したい場合は、`git add .` を `git add <ファイル名>` に変更する。
 
 #### 補足1
-初回に限り、`Author identity unknown` と表示される。`git config user.name <名前>` と `git config user.email <メールアドレス>` を実行してコミットに紐付けるユーザー名を指定する必要がある。
-名前とメールアドレスの部分は何でもよく、`git config user.name a` `git config user.email a` でも良い。ただ、共同作業するときに誰が作業したのかがわかるように、名前にはグループ内で個人を特定できる名前を使うと良い。メールアドレスに本当のアドレスを設定するのは、コミットをインターネット上に公開したときにスパムが飛んでくる可能性があり、メリットが無いため推奨しない。
+初回に限り、`Author identity unknown` と表示される。`git config user.name <名前>` と `git config user.email <メールアドレス>` を実行してコミットに紐付けるユーザー名を指定する必要がある。\
+名前とメールアドレスの部分は何でもよく、`git config user.name a` `git config user.email a` でも良い。ただ、共同作業するときに誰が作業したのかがわかるように、名前にはグループ内で個人を特定できる名前を使うと良い。メールアドレスに本当のアドレスを設定するのは、コミットをインターネット上に公開したときにスパムが飛んでくる可能性があり、メリットが無いため推奨しない。\
+GitHubを使う場合は、GitHubのユーザー名と、GitHubの Settings > Emails > Primary email address にある `...@users.noreply.github.com` のメールアドレスを設定すると良い。
 
 #### 補足2
 `git commit` は `git init` コマンドで生成された `.git/` フォルダに `git add` で指定されたファイルすべてを保存するコマンド。逆に、一度作ったgitレポジトリを消したいときは単純に `.git/` フォルダを消せば良い。
@@ -199,7 +200,8 @@ $ git show 7d7d553:main.c
 *1: 保存されたデータの総量が一定以下のときは圧縮されない。
 
 ## 履歴はどこに保存されるのか
-`git init` コマンドを打ったディレクトリに生成される  `.git`  というフォルダの中に保存されている。
+`.git/objects` フォルダの中にバイナリデータで保存される。\
+圧縮されていないデータは0d等の2文字のフォルダ内、圧縮されたデータはpack内に保存される。
 
 ## 以上の内容の動画
 <video src="./assets/git-tutorial1.mp4" controls style="width: 60%"></video>
