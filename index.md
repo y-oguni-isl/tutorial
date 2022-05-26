@@ -254,6 +254,15 @@ gitはバージョン管理システム。GitHubはgitの履歴を複数人で�
 ## git clone
 リモートレポジトリのデータをローカルレポジトリにもってくる作業は、以上のように `git remote add` と `git pull` でやっても良いが、 `git clone` を使うと簡単にできる。
 
+たとえば https://github.com/githubtraining/hellogitworld をダウンロードしたい場合は次のコマンドを実行すると、`mkdir hellogitworld && cd hellogitworld && git remote add origin https://github.com/githubtraining/hellogitworld.git && git pull` に相当する処理を実行してくれる。
+
+```shell
+git clone https://github.com/githubtraining/hellogitworld.git
+```
+
+### 補足
+GitHubの場合、urlの `.git` は省略できて、`git clone https://github.com/githubtraining/hellogitworld` でも良い。
+
 # コンフリクト
 ## コンフリクトと対処方法
 複数人で同じファイルに同時に変更を加えると、 **コンフリクト** が発生する。（下図を参照。text: xxxはファイルの中身がxxxであることを表す。）\
